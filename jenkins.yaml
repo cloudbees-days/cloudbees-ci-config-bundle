@@ -1,0 +1,174 @@
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: true
+  numExecutors: 0
+unclassified:
+  githubpluginconfig:
+    configs:
+    - name: "GitHub - CloudBees Days"
+      credentialsId: "cbdays-github-token-secret"
+      manageHooks: true
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: SURVIVABLE_NONATOMIC
+  globallibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "cb-days"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              credentialsId: "cbdays-github-ops-username-token"
+              repoOwner: "cloudbees-days"
+              repository: "pipeline-library"
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
+kube:
+  podTemplatesConfiguration:
+    templates:
+    - containers:
+      - args: "cat"
+        command: "/bin/sh -c"
+        image: "node:8.12.0-alpine"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "nodejs"
+        resourceLimitCpu: "1"
+        resourceLimitMemory: "1Gi"
+        resourceRequestCpu: "500m"
+        resourceRequestMemory: "512Mi"
+        ttyEnabled: true
+      label: "nodejs-app"
+      name: "nodejs-app"
+      workspaceVolume:
+        emptyDirWorkspaceVolume:
+          memory: false
+      yaml: |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+      yamlMergeStrategy: "override"
+      yamls:
+      - |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+    - containers:
+      - args: "cat"
+        command: "/bin/sh -c"
+        image: "openjdk:10-jdk-slim-sid"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "jdk10"
+        resourceLimitCpu: "1"
+        resourceLimitMemory: "1Gi"
+        resourceRequestCpu: "500m"
+        resourceRequestMemory: "512Mi"
+        ttyEnabled: true
+      label: "jdk10"
+      name: "jdk10"
+      workspaceVolume:
+        emptyDirWorkspaceVolume:
+          memory: false
+      yaml: |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+      yamlMergeStrategy: "override"
+      yamls:
+      - |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+    - containers:
+      - args: "cat"
+        command: "/bin/sh -c"
+        image: "openjdk:8-jdk-slim"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "jdk8"
+        resourceLimitCpu: "1"
+        resourceLimitMemory: "1Gi"
+        resourceRequestCpu: "500m"
+        resourceRequestMemory: "512Mi"
+        ttyEnabled: true
+      label: "jdk8"
+      name: "jdk8"
+      workspaceVolume:
+        emptyDirWorkspaceVolume:
+          memory: false
+      yaml: |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+      yamlMergeStrategy: "override"
+      yamls:
+      - |-
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          name: default-jnlp
+        spec:
+          securityContext:
+            runAsUser: 1000
+credentials:
+  system:
+    domainCredentials:
+      - domain :
+          name: "github.com"
+          description: "GitHub"
+        credentials:
+          - string:
+              scope: GLOBAL
+              id: cbdays-github-token-secret
+              description: "GitHub PAT from JCasC - secret text"
+              secret: REPLACE_WITH_JENKINS_ENCODED_PAT
+          - usernamePassword:
+              scope: GLOBAL
+              id: cbdays-github-username-pat
+              description: "GitHub PAT from JCasC - username/password"
+              username: REPLACE_WITH_YOUR_GITHUB_USERNAME
+              password: REPLACE_WITH_JENKINS_ENCODED_PAT

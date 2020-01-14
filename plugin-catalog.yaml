@@ -1,0 +1,9 @@
+type: "plugin-catalog"
+version: "1"
+name: "unbundled_plugins"
+displayName: "Unbundled Plugins"
+configurations:
+- description: "Additional workshop plugins"
+  includePlugins:
+    pipeline-utility-steps:
+      version: "2.3.1"

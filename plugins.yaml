@@ -1,0 +1,3 @@
+plugins:
+- id: "pipeline-utility-steps"
+- id: "managed-master-hibernation"

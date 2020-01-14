@@ -1,0 +1,9 @@
+id: "workshop-bundle"
+version: "1"
+description: "A configuration bundle for workshop setup"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
