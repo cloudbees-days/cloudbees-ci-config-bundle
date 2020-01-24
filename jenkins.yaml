@@ -12,6 +12,8 @@ jenkins:
     rawHtml:
       disableSyntaxHighlighting: true
   numExecutors: 0
+  systemMessage: |+
+    v1 - Master configured automatically by Core CasC from CJOC
 unclassified:
   githubpluginconfig:
     configs:
