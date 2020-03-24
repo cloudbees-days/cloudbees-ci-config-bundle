@@ -33,12 +33,6 @@ unclassified:
               credentialsId: "cbdays-github-username-pat"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
-  hibernationConfiguration:
-    activities:
-    - "build"
-    - "web"
-    enabled: true
-    gracePeriod: 720
 notificationConfiguration:
   enabled: true
   router: "operationsCenter"
