@@ -30,8 +30,8 @@ unclassified:
         modernSCM:
           scm:
             github:
-              credentialsId: "cbdays-github-ops-username-token"
-              repoOwner: "cloudbees-days"
+              credentialsId: "cbdays-github-username-pat"
+              repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
   hibernationConfiguration:
     activities:
