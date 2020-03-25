@@ -5,3 +5,4 @@ plugins:
 - id: "notification-api"
 - id: "operations-center-notification"
 - id: "pipeline-event-step"
+- id: "antisamy-markup-formatter"

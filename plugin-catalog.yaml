@@ -5,6 +5,8 @@ displayName: "Unbundled Plugins"
 configurations:
 - description: "Additional workshop plugins"
   includePlugins:
+    antisamy-markup-formatter:
+      version: "1.8"
     pipeline-utility-steps:
       version: "2.5.0"
     cloudbees-pipeline-policies:
