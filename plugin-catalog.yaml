@@ -6,4 +6,15 @@ configurations:
 - description: "Additional workshop plugins"
   includePlugins:
     pipeline-utility-steps:
-      version: "2.3.1"
+      version: "2.5.0"
+    cloudbees-pipeline-policies:
+      version: "0.8"
+    managed-master-hibernation:
+      version: "0.2-alpha"
+    notification-api:
+      version: "1.2"
+    operations-center-notification:
+      version: "1.0"
+    pipeline-event-step:
+      version: "1.7"
+
