@@ -33,9 +33,6 @@ unclassified:
               credentialsId: "cbdays-github-username-pat"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
-notificationConfiguration:
-  enabled: true
-  router: "operationsCenter"
 kube:
   podTemplatesConfiguration:
     templates:
