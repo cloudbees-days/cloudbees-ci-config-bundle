@@ -12,7 +12,7 @@ configurations:
     cloudbees-pipeline-policies:
       version: "0.8"
     managed-master-hibernation:
-      version: "0.2-alpha"
+      version: "0.3-alpha"
     notification-api:
       version: "1.2"
     operations-center-notification:
