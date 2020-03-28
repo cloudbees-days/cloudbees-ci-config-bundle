@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Update Config Bundle') {
       steps {
-        configBundleUpdate("${masterName}", "core")
+        configBundleUpdate("${masterName}")
       }
     }
   }
