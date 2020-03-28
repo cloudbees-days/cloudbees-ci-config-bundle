@@ -171,3 +171,45 @@ credentials:
               description: "GitHub PAT from JCasC - username/password"
               username: "REPLACE_WITH_YOUR_GITHUB_USERNAME"
               password: "REPLACE_WITH_JENKINS_ENCODED_PAT"
+jobs:
+  - scripts: >
+      organizationFolder('/REPLACE_MASTER_NAME/REPLACE_GITHUB_ORG') {
+        description('REPLACE_GITHUB_ORG GitHub Organization')
+        displayName('REPLACE_GITHUB_ORG GitHub Organization')
+        triggers {
+          periodic(12400)
+        }
+        buildStrategies {
+          skipInitialBuildOnFirstBranchIndexing()
+        }
+        organizations {
+          github {
+            id('123456789')
+            repoOwner("REPLACE_GITHUB_ORG")
+            apiUri("https://api.github.com")
+            credentialsId('cbdays-github-username-pat')
+            traits {
+              publicRepoPullRequestFilterTrait()
+            }
+          }
+        }
+        configure {
+            def traits = it / navigators / 'org.jenkinsci.plugins.github__branch__source.GitHubSCMNavigator' / traits
+            traits << 'org.jenkinsci.plugins.github_branch_source.BranchDiscoveryTrait' {
+                strategyId 1
+            }
+            traits << 'org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait' {
+                strategyId 2
+                trust(class: 'org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustEveryone')
+            }
+            traits << 'org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait' {
+                strategyId 2
+            }
+        }
+        projectFactories {
+          workflowMultiBranchProjectFactory {
+            // Relative location within the checkout of your Pipeline script.
+            scriptPath("Jenkinsfile")
+          }
+        }
+      }

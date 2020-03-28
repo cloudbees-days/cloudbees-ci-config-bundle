@@ -19,4 +19,6 @@ configurations:
       version: "1.0"
     pipeline-event-step:
       version: "1.7"
+    job-dsl:
+      version: "1.77"
 
