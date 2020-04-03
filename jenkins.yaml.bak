@@ -169,5 +169,5 @@ credentials:
               scope: GLOBAL
               id: cbdays-github-username-pat
               description: "GitHub PAT from JCasC - username/password"
-              username: "jpflug"
+              username: "REPLACE_WITH_YOUR_GITHUB_USERNAME"
               password: "{AQAAABAAAAAwsOugckQJz5ZT2sTK+cyLCPZPedD4F9pcm9Q7S/xkBMR6x+FVf2FaAmVvxIbZLgNzYse4rSavv6jwAmjOJwshHg==}"
