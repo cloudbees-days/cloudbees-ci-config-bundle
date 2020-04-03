@@ -13,7 +13,7 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
-    v1 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
+    v2 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
 unclassified:
   githubpluginconfig:
     configs:
@@ -33,6 +33,12 @@ unclassified:
               credentialsId: "cbdays-github-username-pat"
               repoOwner: "cb-workshop-test"
               repository: "pipeline-library"
+hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 240
 kube:
   podTemplatesConfiguration:
     templates:
