@@ -9,10 +9,6 @@ configurations:
       version: "1.8"
     pipeline-utility-steps:
       version: "2.5.0"
-    cloudbees-pipeline-policies:
-      version: "0.8"
-    managed-master-hibernation:
-      version: "0.3-alpha"
     notification-api:
       version: "1.2"
     operations-center-notification:

@@ -1,7 +1,5 @@
 plugins:
 - id: "pipeline-utility-steps"
-- id: "managed-master-hibernation"
-- id: "cloudbees-pipeline-policies"
 - id: "notification-api"
 - id: "operations-center-notification"
 - id: "pipeline-event-step"
