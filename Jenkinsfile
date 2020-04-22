@@ -1,6 +1,4 @@
 library 'cb-days@master'
-def masterName = System.properties.'MASTER_NAME'
-
 pipeline {
   agent none
   options {
@@ -8,9 +6,13 @@ pipeline {
     skipDefaultCheckout true
   }
   stages {
+    when {
+      beforeAgent true
+      branch 'master'
+    }
     stage('Update Config Bundle') {
       steps {
-        configBundleUpdate("${masterName}")
+        configBundleUpdate()
       }
     }
   }
