@@ -53,6 +53,12 @@ unclassified:
               credentialsId: "cbdays-github-username-pat"
               repoOwner: "bee-cd"
               repository: "pipeline-library"
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 7200              
 credentials:
   system:
     domainCredentials:
