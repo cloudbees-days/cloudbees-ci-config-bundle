@@ -3,4 +3,3 @@ plugins:
 - id: "basic-branch-build-strategies"
 - id: "pipeline-utility-steps"
 - id: "cloudbees-github-reporting"
-- id: "cloudbees-workflow-template"
