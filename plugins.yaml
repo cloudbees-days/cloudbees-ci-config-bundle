@@ -1,7 +1,4 @@
 plugins:
-- id: "pipeline-utility-steps"
-- id: "notification-api"
-- id: "operations-center-notification"
-- id: "pipeline-event-step"
 - id: "antisamy-markup-formatter"
 - id: "basic-branch-build-strategies"
+- id: "pipeline-utility-steps"
