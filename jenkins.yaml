@@ -8,9 +8,6 @@ jenkins:
     standard:
       excludeClientIPFromCrumb: false
   disableRememberMe: false
-  markupFormatter:
-    rawHtml:
-      disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
     v1 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
