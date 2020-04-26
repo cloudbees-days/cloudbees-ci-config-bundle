@@ -2,3 +2,6 @@ plugins:
 - id: "basic-branch-build-strategies"
 - id: "pipeline-utility-steps"
 - id: "cloudbees-github-reporting"
+- id: "notification-api"
+- id: "operations-center-notification"
+- id: "pipeline-event-step"
