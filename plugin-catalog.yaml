@@ -11,3 +11,5 @@ configurations:
       version: "2.5.0"
     cloudbees-github-reporting:
       url: "https://storage.googleapis.com/core-workshop-plugins/cloudbees-github-reporting-0.5.hpi"
+    cloudbees-pipeline-policies:
+      version: "0.8"
