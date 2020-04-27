@@ -11,5 +11,3 @@ configurations:
       version: "1.3.2"
     pipeline-utility-steps:
       version: "2.5.0"
-    cloudbees-github-reporting:
-      url: "https://storage.googleapis.com/core-workshop-plugins/cloudbees-github-reporting-0.5.hpi"
