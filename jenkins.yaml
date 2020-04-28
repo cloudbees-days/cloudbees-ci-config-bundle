@@ -13,7 +13,27 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
-    v1 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
+    v2 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
+kube:
+  podTemplatesConfiguration:
+    templates:
+    - containers:
+      - args: "cat"
+        command: "/bin/sh -c"
+        image: "node:12.16.2-alpine3.11"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        name: "nodejs"
+        ttyEnabled: true
+        workingDir: "/home/jenkins/agent"
+      hostNetwork: false
+      label: "nodejs"
+      name: "nodejs"
+      yamlMergeStrategy: "override"
 unclassified:
   githubpluginconfig:
     configs:
@@ -33,6 +53,12 @@ unclassified:
               credentialsId: "cbdays-github-username-pat"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 7200
 credentials:
   system:
     domainCredentials:
