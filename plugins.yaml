@@ -5,3 +5,5 @@ plugins:
 - id: "notification-api"
 - id: "operations-center-notification"
 - id: "pipeline-event-step"
+- id: "cloudbees-pipeline-policies"
+- id: "managed-master-hibernation"
