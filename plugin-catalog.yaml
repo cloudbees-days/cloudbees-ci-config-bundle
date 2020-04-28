@@ -9,3 +9,5 @@ configurations:
       version: "1.3.2"
     pipeline-utility-steps:
       version: "2.5.0"
+    cloudbees-pipeline-policies:
+      version: "0.8"
