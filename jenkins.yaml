@@ -13,7 +13,7 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
-    v2 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
+    v3 - Testing own update with CasC
 kube:
   podTemplatesConfiguration:
     templates:
