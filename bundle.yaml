@@ -1,5 +1,5 @@
 id: "workshop-bundle"
-version: "1"
+version: "2"
 description: "A configuration bundle for workshop setup"
 plugins:
   - "plugins.yaml"
