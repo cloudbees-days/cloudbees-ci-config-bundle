@@ -13,7 +13,7 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
-    v3 - Testing own update with CasC
+    v4 - Hibernate after 3 hours
 kube:
   podTemplatesConfiguration:
     templates:
@@ -58,7 +58,7 @@ unclassified:
     - "build"
     - "web"
     enabled: true
-    gracePeriod: 1800
+    gracePeriod: 10800
 credentials:
   system:
     domainCredentials:
