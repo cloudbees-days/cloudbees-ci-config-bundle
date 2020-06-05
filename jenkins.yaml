@@ -13,7 +13,7 @@ jenkins:
       disableSyntaxHighlighting: true
   numExecutors: 0
   systemMessage: |+
-    v4 - Hibernate after 3 hours
+    v5 - It's Friday!
 kube:
   podTemplatesConfiguration:
     templates:
