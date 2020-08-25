@@ -1,6 +1,7 @@
-id: "workshop-bundle"
+apiVersion: "1"
+id: "REPLACE_GITHUB_USERNAME"
 version: "1"
-description: "A configuration bundle for workshop setup"
+description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
 plugins:
   - "plugins.yaml"
 jcasc:
