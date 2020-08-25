@@ -1,53 +1,52 @@
 jenkins:
-  agentProtocols:
-  - "Diagnostic-Ping"
-  - "JNLP4-connect"
-  - "OperationsCenter2"
-  - "Ping"
-  crumbIssuer:
-    standard:
-      excludeClientIPFromCrumb: false
-  disableRememberMe: false
-  markupFormatter:
-    rawHtml:
-      disableSyntaxHighlighting: true
-  numExecutors: 0
-  systemMessage: |+
-    v1 - Master configured with Configuration as Code for CloudBees Core from CloudBees Core Operations Center
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v1'
 unclassified:
-  githubpluginconfig:
-    configs:
-    - name: "GitHub - CloudBees Days"
-      credentialsId: "cbdays-github-token-secret"
-      manageHooks: true
-  globalDefaultFlowDurabilityLevel:
-    durabilityHint: SURVIVABLE_NONATOMIC
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 7200
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookSecretConfigs:
+    - credentialsId: "cloudbees-ci-workshop-github-webhook-secret"
   globallibraries:
     libraries:
     - defaultVersion: "master"
-      name: "cb-days"
+      name: "pipeline-library"
       retriever:
         modernSCM:
           scm:
             github:
-              credentialsId: "cbdays-github-username-pat"
+              credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
 credentials:
   system:
     domainCredentials:
-      - domain :
-          name: "github.com"
-          description: "GitHub"
-        credentials:
-          - string:
-              scope: GLOBAL
-              id: cbdays-github-token-secret
-              description: "GitHub PAT from JCasC - secret text"
-              secret: "REPLACE_WITH_JENKINS_ENCODED_PAT"
-          - usernamePassword:
-              scope: GLOBAL
-              id: cbdays-github-username-pat
-              description: "GitHub PAT from JCasC - username/password"
-              username: "REPLACE_WITH_YOUR_GITHUB_USERNAME"
-              password: "REPLACE_WITH_JENKINS_ENCODED_PAT"
+    - credentials:
+      - string:
+          description: "Webhook secret for CloudBees CI Workshop GitHub App"
+          id: "cloudbees-ci-workshop-github-webhook-secret"
+          scope: SYSTEM
+          secret: "\${gitHubWebhookSecret}"
+      - gitHubApp:
+          apiUri: "https://api.github.com"
+          appID: "77562"
+          description: "CloudBees CI Workshop GitHub App credential"
+          id: "cloudbees-ci-workshop-github-app"
+          owner: "REPLACE_GITHUB_ORG"
+          privateKey: "\${gitHubAppPrivateKey}"
+cloudbees-slack-integration:
+  config:
+    slackToken: "\${slackToken}"
+    slackWorkspace: "T010A455W77"
+    users:
+    - id: "REPLACE_JENKINS_USER"
+      jenkins: "REPLACE_JENKINS_USER"
+      optedIn: true
+      scmId: "REPLACE_MASTER_NAME"
+      slack: "REPLACE_USER_EMAIL"
+      slackWorkspace: "T010A455W77"
