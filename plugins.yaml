@@ -30,6 +30,7 @@ plugins:
 - id: pipeline-model-extensions
 - id: pipeline-stage-view
 - id: plugin-util-api
+- id: pipeline-utility-steps
 - id: popper-api
 - id: prometheus
 - id: warnings-ng
