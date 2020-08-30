@@ -23,6 +23,18 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+kube:
+  podTemplatesConfiguration:
+    templates:
+    - containers:
+      - name: "maven"
+        image: "maven:3-openjdk-8-slim"
+        workingDir: "/home/jenkins/agent"
+      idleMinutes: 30
+      idleMinutesStr: "30"
+      label: "maven"
+      name: "maven"
+      podRetention: "always"
 credentials:
   system:
     domainCredentials:
