@@ -27,25 +27,14 @@ kube:
   podTemplatesConfiguration:
     templates:
     - containers:
-      - args: "cat"
-        command: "/bin/sh -c"
+      - name: "maven"
         image: "maven:3-openjdk-8-slim"
-        livenessProbe:
-          failureThreshold: 0
-          initialDelaySeconds: 0
-          periodSeconds: 0
-          successThreshold: 0
-          timeoutSeconds: 0
-        name: "maven"
-        ttyEnabled: true
         workingDir: "/home/jenkins/agent"
-      hostNetwork: false
       idleMinutes: 30
       idleMinutesStr: "30"
       label: "maven"
       name: "maven"
       podRetention: "always"
-      yamlMergeStrategy: "override"
 credentials:
   system:
     domainCredentials:
