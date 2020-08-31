@@ -23,6 +23,9 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+notificationConfiguration:
+  enabled: true
+  router: "localOnlyFallback"
 kube:
   podTemplatesConfiguration:
     templates:
