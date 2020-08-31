@@ -1,6 +1,6 @@
 apiVersion: "1"
 id: "beedemo-dev"
-version: "2"
+version: "3"
 description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
 plugins:
   - "plugins.yaml"
