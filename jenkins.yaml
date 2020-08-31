@@ -28,8 +28,9 @@ kube:
     templates:
     - containers:
       - name: "maven"
-        image: "maven:3-openjdk-8-slim"
+        image: "maven:3-openjdk-8"
         workingDir: "/home/jenkins/agent"
+        ttyEnabled: true
       idleMinutes: 30
       idleMinutesStr: "30"
       label: "maven"
