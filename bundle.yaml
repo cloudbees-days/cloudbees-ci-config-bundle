@@ -1,6 +1,6 @@
 apiVersion: "1"
 id: "REPLACE_GITHUB_ORG"
-version: "4"
+version: "REPLACE_VERSION"
 description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
 plugins:
   - "plugins.yaml"
