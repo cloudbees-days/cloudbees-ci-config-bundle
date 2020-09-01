@@ -1,0 +1,10 @@
+apiVersion: "1"
+id: "REPLACE_GITHUB_ORG"
+version: "REPLACE_VERSION"
+description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
