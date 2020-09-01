@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v3'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -23,6 +23,9 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+notificationConfiguration:
+  enabled: true
+  router: "localOnlyFallback"
 kube:
   podTemplatesConfiguration:
     templates:
