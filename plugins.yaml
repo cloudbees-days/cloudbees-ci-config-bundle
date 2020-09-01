@@ -10,6 +10,7 @@ plugins:
 - id: cloudbees-msteams
 - id: cloudbees-nodes-plus
 - id: cloudbees-pipeline-policies
+- id: cloudbees-slack
 - id: cloudbees-template
 - id: cloudbees-view-creation-filter
 - id: cloudbees-workflow-template
