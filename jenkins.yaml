@@ -24,7 +24,7 @@ unclassified:
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
 groovy:
-  - url: https://raw.githubusercontent.com/cloudbees-days/ops-workshop-setup/master/groovy/mc-create-pipeline-template-job.groovy
+  - url: https://raw.githubusercontent.com/REPLACE_GITHUB_ORG/cloudbees-ci-config-bundle/master/create-pipeline-template-job.groovy
 credentials:
   system:
     domainCredentials:
