@@ -23,6 +23,8 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+groovy:
+  - url: https://raw.githubusercontent.com/cloudbees-days/ops-workshop-setup/master/groovy/mc-create-pipeline-template-job.groovy
 credentials:
   system:
     domainCredentials:
