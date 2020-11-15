@@ -1,4 +1,5 @@
 jenkins:
+  authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v1'
 unclassified:
   hibernationConfiguration:
