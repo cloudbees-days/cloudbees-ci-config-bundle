@@ -6,7 +6,6 @@ configurations:
 - description: Workshop Additional Plugins
   includePlugins:
     cloudbees-disk-usage-simple: {version: 0.9}
-    cloudbees-msteams: {url: "https://storage.googleapis.com/core-workshop-plugins/cloudbees-msteams-0.2.hpi"} 
     configuration-as-code-groovy: {version: 1.1} 
     extended-read-permission: {version: 3.2}
     pipeline-utility-steps: {version: 2.6.1}
