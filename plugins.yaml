@@ -2,7 +2,7 @@ plugins:
 - id: analysis-model-api
 - id: antisamy-markup-formatter
 - id: bootstrap4-api
-- id: checks-apii
+- id: checks-api
 - id: cloudbees-casc-api
 - id: cloudbees-disk-usage-simple
 - id: cloudbees-github-reporting
