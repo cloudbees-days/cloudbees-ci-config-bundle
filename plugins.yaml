@@ -7,7 +7,6 @@ plugins:
 - id: cloudbees-github-reporting
 - id: cloudbees-groovy-view
 - id: cloudbees-monitoring
-- id: cloudbees-msteams
 - id: cloudbees-nodes-plus
 - id: cloudbees-pipeline-policies
 - id: cloudbees-slack
