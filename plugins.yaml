@@ -3,6 +3,7 @@ plugins:
 - id: antisamy-markup-formatter
 - id: bootstrap4-api
 - id: checks-api
+- id: cloudbees-casc-api
 - id: cloudbees-disk-usage-simple
 - id: cloudbees-github-reporting
 - id: cloudbees-groovy-view
@@ -17,7 +18,6 @@ plugins:
 - id: configuration-as-code-groovy
 - id: data-tables-api
 - id: echarts-api
-- id: extended-read-permission
 - id: font-awesome-api
 - id: forensics-api
 - id: git
