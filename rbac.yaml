@@ -14,13 +14,15 @@ roles:
   filterable: 'true'
   permissions:
   - hudson.model.Hudson.SystemRead
-  - hudson.model.Item.Read
   - hudson.model.Hudson.Manage
+  - hudson.model.Item.Read
   - hudson.model.Item.Create
-  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
-  - hudson.model.Item.Build
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ManageCatalogs
   - hudson.model.Item.Configure
+  - hudson.model.Item.Build
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
+  - nectar.plugins.rbac.groups.Group.View
+  - nectar.plugins.rbac.roles.Role.View
 groups:
 - name: Administrators
   members:
