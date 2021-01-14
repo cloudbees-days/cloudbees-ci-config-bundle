@@ -19,6 +19,7 @@ roles:
   - hudson.model.Item.Create
   - hudson.model.Item.Configure
   - hudson.model.Item.Build
+  - com.cloudbees.plugins.credentials.CredentialsProvider.View
   - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
   - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
   - nectar.plugins.rbac.groups.Group.View
