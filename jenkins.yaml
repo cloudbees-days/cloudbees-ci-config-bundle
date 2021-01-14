@@ -1,3 +1,11 @@
+cloudbees-pipeline-policies:
+  config:
+    policies:
+    - action: "fail"
+      name: "Timeout policy"
+      rules:
+      - entirePipelineTimeoutRule:
+          maxTime: 30
 jenkins:
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v4'
 unclassified:
