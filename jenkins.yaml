@@ -1,3 +1,11 @@
+cloudbees-pipeline-policies:
+  config:
+    policies:
+    - action: "fail"
+      name: "Timeout policy"
+      rules:
+      - entirePipelineTimeoutRule:
+          maxTime: 30
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
@@ -15,7 +23,7 @@ unclassified:
     - credentialsId: "cloudbees-ci-workshop-github-webhook-secret"
   globallibraries:
     libraries:
-    - defaultVersion: "master"
+    - defaultVersion: "module-2"
       name: "pipeline-library"
       retriever:
         modernSCM:
