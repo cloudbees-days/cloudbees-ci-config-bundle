@@ -88,7 +88,7 @@ credentials:
           secret: "${gitHubWebhookSecret}"
       - gitHubApp:
           apiUri: "https://api.github.com"
-          appID: "77562"
+          appID: "${gitHubAppId}"
           description: "CloudBees CI Workshop GitHub App credential"
           id: "cloudbees-ci-workshop-github-app"
           owner: "REPLACE_GITHUB_ORG"
