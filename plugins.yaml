@@ -18,6 +18,7 @@ plugins:
 - id: configuration-as-code-groovy
 - id: data-tables-api
 - id: echarts-api
+- id: extended-read-permission
 - id: font-awesome-api
 - id: forensics-api
 - id: git
