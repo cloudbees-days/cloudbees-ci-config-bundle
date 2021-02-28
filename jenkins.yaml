@@ -12,6 +12,8 @@ unclassified:
   gitHubPluginConfig:
     hookSecretConfigs:
     - credentialsId: "cloudbees-ci-workshop-github-webhook-secret"
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: PERFORMANCE_OPTIMIZED
   globallibraries:
     libraries:
     - defaultVersion: "master"
