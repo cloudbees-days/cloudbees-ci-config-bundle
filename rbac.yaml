@@ -29,6 +29,7 @@ groups:
   members:
     users:
     - admin
+    - team-admin
   roles:
   - name: administrator
     grantedAt: current
