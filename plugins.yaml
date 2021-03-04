@@ -29,6 +29,7 @@ plugins:
 - id: managed-master-hibernation
 - id: maven-plugin
 - id: operations-center-cloud
+- id: operations-center-notification
 - id: pipeline-event-step
 - id: pipeline-model-extensions
 - id: pipeline-stage-view
