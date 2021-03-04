@@ -1,6 +1,6 @@
 notificationConfiguration:
   enabled: true
-  router: "localOnlyFallback"
+  router: "operationsCenter"
 cloudbees-slack-integration:
   config:
     slackToken: "${slackToken}"
@@ -12,17 +12,9 @@ cloudbees-slack-integration:
       scmId: "REPLACE_GITHUB_USERNAME"
       slack: "REPLACE_USER_EMAIL"
       slackWorkspace: "T010A455W77"
-cloudbees-pipeline-policies:
-  config:
-    policies:
-    - action: "fail"
-      name: "Timeout policy"
-      rules:
-      - entirePipelineTimeoutRule:
-          maxTime: 60
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v6'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC'
 unclassified:
   hibernationConfiguration:
     activities:
@@ -54,30 +46,22 @@ kube:
     - containers:
       - args: "cat"
         command: "/bin/sh -c"
-        image: "maven:3-openjdk-8"
+        image: "node:8.12.0-alpine"
         livenessProbe:
           failureThreshold: 0
           initialDelaySeconds: 0
           periodSeconds: 0
           successThreshold: 0
           timeoutSeconds: 0
-        name: "maven"
+        name: "nodejs"
         ttyEnabled: true
         workingDir: "/home/jenkins/agent"
-      envVars:
-      - envVar:
-          key: "MAVEN_CONFIG"
-          value: "/var/maven/.m2"
       hostNetwork: false
       idleMinutes: 30
       idleMinutesStr: "30"
-      label: "maven"
-      name: "maven"
+      label: "nodejs-app"
+      name: "nodejs-app"
       podRetention: "always"
-      volumes:
-      - emptyDirVolume:
-          memory: false
-          mountPath: "/var/maven/"
       yamlMergeStrategy: "override"
 credentials:
   system:
