@@ -8,6 +8,7 @@ cloudbees-pipeline-policies:
           maxTime: 60
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
+  quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
 unclassified:
   hibernationConfiguration:
