@@ -14,6 +14,7 @@ cloudbees-slack-integration:
       slackWorkspace: "T010A455W77"
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
+  quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC'
 unclassified:
   hibernationConfiguration:
