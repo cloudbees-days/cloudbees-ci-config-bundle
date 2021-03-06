@@ -7,6 +7,7 @@ cloudbees-pipeline-policies:
       - entirePipelineTimeoutRule:
           maxTime: 30
 jenkins:
+  quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v3'
 unclassified:
   hibernationConfiguration:
