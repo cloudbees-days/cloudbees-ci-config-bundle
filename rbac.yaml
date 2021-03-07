@@ -30,6 +30,7 @@ groups:
     users:
     - admin
     - team-admin
+    - REPLACE_GITHUB_USERNAME-admin
   roles:
   - name: administrator
     grantedAt: current
