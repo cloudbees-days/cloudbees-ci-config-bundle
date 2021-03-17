@@ -1,17 +1,6 @@
 notificationConfiguration:
   enabled: true
   router: "operationsCenter"
-cloudbees-slack-integration:
-  config:
-    slackToken: "${slackToken}"
-    slackWorkspace: "T010A455W77"
-    users:
-    - id: "REPLACE_GITHUB_USERNAME"
-      jenkins: "REPLACE_JENKINS_USER"
-      optedIn: true
-      scmId: "REPLACE_GITHUB_USERNAME"
-      slack: "REPLACE_USER_EMAIL"
-      slackWorkspace: "T010A455W77"
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   quietPeriod: 0
@@ -64,6 +53,8 @@ kube:
       name: "nodejs-app"
       podRetention: "always"
       yamlMergeStrategy: "override"
+groovy:
+  - url: https://raw.githubusercontent.com/REPLACE_GITHUB_ORG/cloudbees-ci-config-bundle/master/groovy/cbci-pipeline-workshop-create-jobs.groovy
 credentials:
   system:
     domainCredentials:
