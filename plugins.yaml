@@ -4,13 +4,11 @@ plugins:
 - id: bootstrap4-api
 - id: checks-api
 - id: cloudbees-casc-api
-- id: cloudbees-disk-usage-simple
 - id: cloudbees-github-reporting
 - id: cloudbees-groovy-view
 - id: cloudbees-monitoring
 - id: cloudbees-nodes-plus
 - id: cloudbees-pipeline-policies
-- id: cloudbees-slack
 - id: cloudbees-template
 - id: cloudbees-view-creation-filter
 - id: cloudbees-workflow-template
@@ -19,7 +17,6 @@ plugins:
 - id: configuration-as-code-groovy
 - id: data-tables-api
 - id: echarts-api
-- id: extended-read-permission
 - id: font-awesome-api
 - id: forensics-api
 - id: git
@@ -36,7 +33,6 @@ plugins:
 - id: plugin-util-api
 - id: pipeline-utility-steps
 - id: popper-api
-- id: prometheus
 - id: warnings-ng
 - id: wikitext
 - id: workflow-aggregator
