@@ -71,3 +71,9 @@ credentials:
           id: "cloudbees-ci-pipeline-workshop-github-app"
           owner: "REPLACE_GITHUB_ORG"
           privateKey: "${cbciPipelineWorkshopGitHubAppPrivateKey}"
+      - usernamePassword:
+          description: "Example Service Username/Password Credential"
+          id: "example-service-username-password"
+          password: "${cbciWorkshopExampleCredentialServicePassword}"
+          scope: GLOBAL
+          username: "service_user"
