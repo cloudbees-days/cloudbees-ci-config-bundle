@@ -5,7 +5,6 @@ version: "1"
 configurations:
 - description: Workshop Additional Plugins
   includePlugins:
-    cloudbees-casc-api: {version: 0.7}
     cloudbees-disk-usage-simple: {version: '0.10'}
     pipeline-utility-steps: {version: 2.6.1}
     extended-read-permission: {version: '3.2'}
