@@ -25,7 +25,7 @@ unclassified:
     durabilityHint: PERFORMANCE_OPTIMIZED
   globallibraries:
     libraries:
-    - defaultVersion: "master"
+    - defaultVersion: "main"
       name: "pipeline-library"
       retriever:
         modernSCM:
