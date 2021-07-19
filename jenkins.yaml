@@ -1,4 +1,9 @@
 jenkins:
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "BUNDLE_ID"
+        value: "REPLACE_BUNDLE_ID"
   quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v1'
 unclassified:
