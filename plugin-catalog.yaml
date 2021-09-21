@@ -5,7 +5,4 @@ version: "1"
 configurations:
 - description: Workshop Additional Plugins
   includePlugins:
-    cloudbees-disk-usage-simple: {version: '0.10'}
-    pipeline-utility-steps: {version: 2.6.1}
-    extended-read-permission: {version: '3.2'}
-    prometheus: {version: 2.0.8}
+    pipeline-utility-steps: {version: '2.6.1'}
