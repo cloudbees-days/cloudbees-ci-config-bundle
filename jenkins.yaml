@@ -54,7 +54,7 @@ kube:
       podRetention: "always"
       yamlMergeStrategy: "override"
 groovy:
-  - url: https://raw.githubusercontent.com/REPLACE_GITHUB_ORG/cloudbees-ci-config-bundle/master/groovy/cbci-pipeline-workshop-create-jobs.groovy
+  - url: https://raw.githubusercontent.com/REPLACE_GITHUB_ORG/cloudbees-ci-config-bundle/main/groovy/cbci-pipeline-workshop-create-jobs.groovy
 credentials:
   system:
     domainCredentials:
