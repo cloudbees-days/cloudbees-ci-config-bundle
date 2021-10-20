@@ -5,4 +5,5 @@ version: "1"
 configurations:
 - description: Workshop Additional Plugins
   includePlugins:
+    configuration-as-code-groovy: {version: '1.1'} 
     pipeline-utility-steps: {version: '2.6.1'}
