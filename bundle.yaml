@@ -2,6 +2,7 @@ apiVersion: "1"
 version: "5"
 id: "cloudbees-ci-workshop-REPLACE_CONTROLLER_NAME"
 description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
+availabilityPattern: "REPLACE_AVAILABILITY_PATTERN"
 plugins:
   - "plugins.yaml"
 jcasc:
