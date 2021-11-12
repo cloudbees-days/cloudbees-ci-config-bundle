@@ -1,0 +1,34 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: multibranch
+  name: pipeline-catalog-ops
+  sourcesList:
+  - branchSource:
+      source:
+        github:
+          apiUri: https://api.github.com
+          traits:
+          - gitHubBranchDiscovery:
+              strategyId: 1
+          - gitHubPullRequestDiscovery:
+              strategyId: 1
+          - gitHubForkDiscovery:
+              trust:
+                gitHubTrustPermissions: {
+                  }
+              strategyId: 1
+          repoOwner: REPLACE_GITHUB_ORG
+          credentialsId: cloudbees-ci-workshop-github-app
+          repository: pipeline-template-catalog
+          configuredByUrl: true
+          repositoryUrl: https://github.com/REPLACE_GITHUB_ORG/pipeline-template-catalog.git
+  orphanedItemStrategy:
+    defaultOrphanedItemStrategy:
+      pruneDeadBranches: true
+      daysToKeep: -1
+      numToKeep: -1
+  projectFactory:
+    workflowBranchProjectFactory:
+      scriptPath: Jenkinsfile
