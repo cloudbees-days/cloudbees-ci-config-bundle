@@ -58,6 +58,8 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+  headerLabel:
+    text: "REPLACE_GITHUB_APP"
 kube:
   podTemplatesConfiguration:
     templates:
