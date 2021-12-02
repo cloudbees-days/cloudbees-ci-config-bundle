@@ -51,7 +51,7 @@ unclassified:
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
   headerLabel:
-    text: "ops controller staging"
+    text: "REPLACE_GITHUB_APP"
 credentials:
   system:
     domainCredentials:
