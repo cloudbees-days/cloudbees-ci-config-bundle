@@ -15,6 +15,25 @@ jenkins:
         value: "REPLACE_BUNDLE_ID"
   quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
+globalCloudBeesPipelineTemplateCatalog:
+  catalogs:
+  - branchOrTag: "main"
+    scm:
+      github:
+        configuredByUrl: true
+        credentialsId: "field-workshops-github-app"
+        repoOwner: "cloudbees-days"
+        repository: "pipeline-template-catalog"
+        repositoryUrl: "https://github.com/REPLACE_GITHUB_ORG/pipeline-template-catalog.git"
+        traits:
+        - gitHubBranchDiscovery:
+            strategyId: 1
+        - gitHubPullRequestDiscovery:
+            strategyId: 1
+        - gitHubForkDiscovery:
+            strategyId: 1
+            trust: "gitHubTrustPermissions"
+    updateInterval: "1d"
 unclassified:
   hibernationConfiguration:
     activities:
@@ -40,6 +59,8 @@ unclassified:
               credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "REPLACE_GITHUB_ORG"
               repository: "pipeline-library"
+  headerLabel:
+    text: "REPLACE_GITHUB_APP"
 kube:
   podTemplatesConfiguration:
     templates:
