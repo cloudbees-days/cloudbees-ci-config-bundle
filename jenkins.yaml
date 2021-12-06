@@ -13,7 +13,7 @@ globalCloudBeesPipelineTemplateCatalog:
       github:
         configuredByUrl: true
         credentialsId: "field-workshops-github-app"
-        repoOwner: "cloudbees-days"
+        repoOwner: "REPLACE_GITHUB_ORG"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/REPLACE_GITHUB_ORG/pipeline-template-catalog.git"
         traits:
