@@ -3,10 +3,10 @@ cloudbees-slack-integration:
     slackToken: "${slackToken}"
     slackWorkspace: "T010A455W77"
     users:
-    - id: "REPLACE_GITHUB_USERNAME"
-      jenkins: "REPLACE_JENKINS_USER"
+    - id: "${GITHUB_USER}"
+      jenkins: "${GITHUB_USER}"
       optedIn: true
-      scmId: "REPLACE_GITHUB_USERNAME"
+      scmId: "${GITHUB_USER}"
       slack: "REPLACE_USER_EMAIL"
       slackWorkspace: "T010A455W77"
 cloudbees-pipeline-policies:
@@ -23,7 +23,7 @@ jenkins:
   - envVars:
       env:
       - key: "BUNDLE_ID"
-        value: "REPLACE_BUNDLE_ID"
+        value: "${CASC_BUNDLE_ID}"
   quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC - v5'
 globalCloudBeesPipelineTemplateCatalog:
@@ -33,9 +33,9 @@ globalCloudBeesPipelineTemplateCatalog:
       github:
         configuredByUrl: true
         credentialsId: "cloudbees-ci-workshop-github-app"
-        repoOwner: "REPLACE_GITHUB_ORG"
+        repoOwner: "${GITHUB_ORGANIZATION}"
         repository: "pipeline-template-catalog"
-        repositoryUrl: "https://github.com/REPLACE_GITHUB_ORG/pipeline-template-catalog.git"
+        repositoryUrl: "https://github.com/${GITHUB_ORGANIZATION}/pipeline-template-catalog.git"
         traits:
         - gitHubBranchDiscovery:
             strategyId: 1
@@ -68,10 +68,10 @@ unclassified:
           scm:
             github:
               credentialsId: "cloudbees-ci-workshop-github-app"
-              repoOwner: "REPLACE_GITHUB_ORG"
+              repoOwner: "${GITHUB_ORGANIZATION}"
               repository: "pipeline-library"
   headerLabel:
-    text: "REPLACE_GITHUB_APP"
+    text: "${GITHUB_APP}"
 kube:
   podTemplatesConfiguration:
     templates:
@@ -117,5 +117,5 @@ credentials:
           appID: "${gitHubAppId}"
           description: "CloudBees CI Workshop GitHub App credential"
           id: "cloudbees-ci-workshop-github-app"
-          owner: "REPLACE_GITHUB_ORG"
+          owner: "${GITHUB_ORGANIZATION}"
           privateKey: "${gitHubAppPrivateKey}"
