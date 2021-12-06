@@ -8,8 +8,8 @@ globalCloudBeesPipelineTemplateCatalog:
     scm:
       github:
         configuredByUrl: true
-        credentialsId: "field-workshops-github-app"
-        repoOwner: "cloudbees-days"
+        credentialsId: "cloudbees-ci-workshop-github-app"
+        repoOwner: "REPLACE_GITHUB_ORG"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/REPLACE_GITHUB_ORG/pipeline-template-catalog.git"
         traits:
