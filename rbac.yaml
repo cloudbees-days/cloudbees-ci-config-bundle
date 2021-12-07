@@ -13,17 +13,20 @@ roles:
 - name: manager
   filterable: 'true'
   permissions:
-  - hudson.model.Hudson.SystemRead
   - hudson.model.Hudson.Manage
-  - hudson.model.Item.Read
+  - nectar.plugins.rbac.roles.Role.View
+  - hudson.model.Hudson.SystemRead
+  - com.cloudbees.plugins.credentials.CredentialsProvider.View
+  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
+  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
+  - nectar.plugins.rbac.groups.Group.View
+- name: user
+  filterable: 'true'
+  permissions:
   - hudson.model.Item.Create
   - hudson.model.Item.Configure
+  - hudson.model.Item.Read
   - hudson.model.Item.Build
-  - com.cloudbees.plugins.credentials.CredentialsProvider.View
-  - com.cloudbees.pipeline.governance.templates.catalog.TemplateCatalogAction.ViewCatalogs
-  - com.cloudbees.jenkins.plugin.metrics.views.Alerter.View
-  - nectar.plugins.rbac.groups.Group.View
-  - nectar.plugins.rbac.roles.Role.View
 groups:
 - name: Administrators
   members:
@@ -41,3 +44,11 @@ groups:
   roles:
   - name: manager
     grantedAt: current
+- name: Users
+  members:
+    users:
+    - REPLACE_GITHUB_USERNAME
+  roles:
+  - name: user
+    grantedAt: child
+  
