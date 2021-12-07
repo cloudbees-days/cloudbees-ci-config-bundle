@@ -33,6 +33,9 @@ globalCloudBeesPipelineTemplateCatalog:
             strategyId: 1
             trust: "gitHubTrustPermissions"
     updateInterval: "1d"
+notificationConfiguration:
+  enabled: true
+  router: "localOnlyFallback"
 unclassified:
   hibernationConfiguration:
     activities:
