@@ -36,6 +36,7 @@ globalCloudBeesPipelineTemplateCatalog:
       github:
         configuredByUrl: true
         credentialsId: "cloudbees-ci-workshop-github-app"
+        id: "workshop-catalog"
         repoOwner: "${GITHUB_ORGANIZATION}"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/${GITHUB_ORGANIZATION}/pipeline-template-catalog.git"
