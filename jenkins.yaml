@@ -5,7 +5,7 @@ cloudbees-pipeline-policies:
       name: "Timeout policy"
       rules:
       - entirePipelineTimeoutRule:
-          maxTime: 60
+          maxTime: 30
 jenkins:
   globalNodeProperties:
   - envVars:
