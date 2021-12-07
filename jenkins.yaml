@@ -27,7 +27,7 @@ globalCloudBeesPipelineTemplateCatalog:
     updateInterval: "1d"
 notificationConfiguration:
   enabled: true
-  router: "localOnlyFallback"
+  router: "operationsCenter"
 unclassified:
   hibernationConfiguration:
     activities:
