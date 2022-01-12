@@ -1,0 +1,30 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  displayName: template-jobs
+  name: template-jobs
+  description: ''
+  items:
+  - kind: cloudbeesTemplatedJob
+    catalog: workshopCatalog
+    name: config-bundle-op
+    model: workshopCatalog/casc-bundle
+    attributes:
+    - value: cloudbees-ci-workshop-github-app
+      key: githubCredentialId
+    - value: REPLACE_GITHUB_ORG
+      key: repoOwner
+    - value: config-bundle-op
+      key: name
+    - value: cloudbees-ci-config-bundle
+      key: repository
+  properties:
+  - envVars: {}
+  - kubernetesFolderProperty: {}
+  - itemRestrictions:
+      allowedTypes:
+      - workshopCatalog/maven
+      - workshopCatalog/casc-bundle
+      filter: true
