@@ -8,6 +8,6 @@ items:
   - itemRestrictions:
       allowedTypes:
       - org.jenkinsci.plugins.workflow.job.WorkflowJob
-      - workshopCatalog/containter-build-deploy
-      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProjec
+      - workshopCatalog/container-build-deploy
+      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
       filter: true
