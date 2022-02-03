@@ -73,17 +73,20 @@ kube:
       name: "nodejs-app"
       podRetention: "always"
       yamlMergeStrategy: "override"
-groovy:
-  - url: https://raw.githubusercontent.com/REPLACE_GITHUB_ORG/cloudbees-ci-config-bundle/main/groovy/cbci-pipeline-workshop-create-jobs.groovy
 credentials:
   system:
-    domainCredentials:
+    domainCredentials: 
     - credentials:
       - string:
           description: "CasC Update Secret"
           id: "casc-update-secret"
           scope: GLOBAL
           secret: "${cbciCascWorkshopControllerProvisionSecret}"
+      - string:
+          description: "Feature Management Key"
+          id: "fm-key"
+          scope: GLOBAL
+          secret: "${cbciPipelineWorkshopFmKey}"
       - string:
           description: "Webhook secret for CloudBees CI Workshop GitHub App"
           id: "cloudbees-ci-workshop-github-webhook-secret"
