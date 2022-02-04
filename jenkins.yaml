@@ -58,7 +58,7 @@ kube:
       - name: "nodejs"
         command: "sleep"
         args: "99d"
-        image: "node:8.12.0-alpine"
+        image: "us-east1-docker.pkg.dev/core-workshop/workshop-registry/node:14-alpine"
         livenessProbe:
           failureThreshold: 0
           initialDelaySeconds: 0
