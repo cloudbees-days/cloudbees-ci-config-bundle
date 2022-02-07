@@ -17,7 +17,6 @@ plugins:
 - id: cloudbees-workflow-template
 - id: cloudbees-workflow-ui
 - id: configuration-as-code
-- id: configuration-as-code-groovy
 - id: data-tables-api
 - id: echarts-api
 - id: font-awesome-api
@@ -34,9 +33,12 @@ plugins:
 - id: pipeline-model-extensions
 - id: pipeline-stage-view
 - id: plugin-util-api
-- id: pipeline-utility-steps
 - id: popper-api
 - id: warnings-ng
 - id: wikitext
 - id: workflow-aggregator
 - id: workflow-cps-checkpoint
+# non-cap plugins
+- id: cloudbees-feature-management
+- id: pipeline-utility-steps
+
