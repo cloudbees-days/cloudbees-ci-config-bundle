@@ -5,7 +5,5 @@ version: "1"
 configurations:
 - description: Workshop Additional Plugins
   includePlugins:
-    cloudbees-feature-management:
-      version: 117.v5fc191981a_ed
     pipeline-utility-steps: 
       version: '2.6.1'
