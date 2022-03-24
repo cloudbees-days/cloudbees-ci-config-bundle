@@ -16,7 +16,6 @@ plugins:
 - id: cloudbees-workflow-template
 - id: cloudbees-workflow-ui
 - id: configuration-as-code
-- id: configuration-as-code-groovy
 - id: data-tables-api
 - id: echarts-api
 - id: font-awesome-api
