@@ -48,6 +48,8 @@ items:
                   env:
                   - name: "SECRETS"
                     value: "/var/jenkins_home/jcasc_secrets"
+                  - name: "CONTROLLER_NAME"
+                    value: "REPLACE_CONTROLLER_NAME"
                   - name: "GITHUB_ORGANIZATION"
                     value: "REPLACE_GITHUB_ORG"
                   - name: "GITHUB_USER"
