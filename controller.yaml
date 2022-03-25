@@ -58,6 +58,8 @@ items:
                     value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
                   - name: "CASC_BUNDLE_ID"
                     value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
+                  - name: "AVAILABILITY_PATTERN"
+                    value: "REPLACE_AVAILABILITY_PATTERN"
                   volumeMounts:
                   - name: "jcasc-secrets"
                     mountPath: "/var/jenkins_home/jcasc_secrets"
