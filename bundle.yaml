@@ -1,6 +1,6 @@
 apiVersion: "1"
 version: "1"
-id: "cloudbees-ci-workshop-REPLACE_CONTROLLER_NAME"
+id: "cloudbees-ci-workshop-${CONTROLLER_NAME}"
 description: "CloudBees CI configuration bundle for the CloudBees CI Pipeline Workshop"
 availabilityPattern: "${AVAILABILITY_PATTERN}"
 plugins:
