@@ -7,3 +7,5 @@ configurations:
   includePlugins:
     pipeline-utility-steps: 
       version: '2.6.1'
+    pipeline-graph-view:
+      version: '51.v5a693b766483'
