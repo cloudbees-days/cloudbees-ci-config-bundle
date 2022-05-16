@@ -116,3 +116,9 @@ credentials:
           id: "cloudbees-ci-workshop-github-app"
           owner: "${GITHUB_ORGANIZATION}"
           privateKey: "${gitHubAppPrivateKey}"
+      - usernamePassword:
+          password: "${userApiToken}"
+          description: description:api-token
+          id: api-token
+          usernameSecret: false
+          username: "${GITHUB_USER}"
