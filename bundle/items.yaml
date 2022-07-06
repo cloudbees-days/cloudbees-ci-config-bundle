@@ -10,12 +10,12 @@ items:
   - kubernetesFolderProperty: {}
   - itemRestrictions:
       allowedTypes:
-      - workshopCatalog/maven
-      - workshopCatalog/casc-bundle
+      - workshop-catalog/maven
+      - workshop-catalog/casc-bundle
       filter: true
   items:
   - kind: cloudbeesTemplatedJob
-    catalog: workshopCatalog
+    catalog: workshop-catalog
     name: config-bundle-ops
     model: workshopCatalog/casc-bundle
     attributes:
