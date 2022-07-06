@@ -9,5 +9,5 @@ items:
       allowedTypes:
       - org.jenkinsci.plugins.workflow.job.WorkflowJob
       - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
-      - workshopCatalog/container-build-deploy
+      - workshop-catalog/container-build-deploy
       filter: true
