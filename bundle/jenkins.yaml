@@ -3,6 +3,13 @@ notificationConfiguration:
   router: "operationsCenter"
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "BUNDLE_ID"
+        value: "${CASC_BUNDLE_ID}"
+      - key: "GITHUB_APP"
+        value: "${GITHUB_APP}"
   quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC'
 globalCloudBeesPipelineTemplateCatalog:
