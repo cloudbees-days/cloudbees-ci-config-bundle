@@ -69,8 +69,8 @@ items:
                     mountPath: "/var/jenkins_home/jcasc_secrets"
                 volumes:
                 - name: "jcasc-secrets"
-                csi:
-                  driver: secrets-store.csi.k8s.io
-                  readOnly: true
-                  volumeAttributes:
-                    secretProviderClass: "cbci-mc-secret-provider"
+                  csi:
+                    driver: secrets-store.csi.k8s.io
+                    readOnly: true
+                    volumeAttributes:
+                      secretProviderClass: "cbci-mc-secret-provider"
