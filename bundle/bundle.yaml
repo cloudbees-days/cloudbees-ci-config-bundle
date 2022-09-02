@@ -10,6 +10,4 @@ jcasc:
 catalog:
   - "plugin-catalog.yaml"
 items:
-  - "/items/admin-jobs-folder.yaml"
-  - "/items/pipelines-folder.yaml"
   - "items/"
