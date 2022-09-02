@@ -12,6 +12,7 @@ plugins:
 - id: cloudbees-monitoring
 - id: cloudbees-nodes-plus
 - id: cloudbees-pipeline-policies
+- id: cloudbees-slack
 - id: cloudbees-template
 - id: cloudbees-view-creation-filter
 - id: cloudbees-workflow-template
