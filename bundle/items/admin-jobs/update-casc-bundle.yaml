@@ -6,7 +6,7 @@ items:
 - kind: cloudbeesTemplatedJob
   catalog: workshop-catalog
   name: config-bundle-ops
-  model: workshopCatalog/casc-bundle
+  model: workshop-catalog/casc-bundle
   attributes:
   - value: cloudbees-ci-previews-demo-github-app
     key: githubCredentialId
