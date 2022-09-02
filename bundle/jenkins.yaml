@@ -101,11 +101,11 @@ credentials:
           secret: "${gitHubWebhookSecret}"
       - gitHubApp:
           apiUri: "https://api.github.com"
-          appID: "103013"
-          description: "CloudBees CI Pipeline Workshop GitHub App credential"
-          id: "cloudbees-ci-pipeline-workshop-github-app"
+          appID: "234437"
+          description: "CloudBees CI Previews Demo GitHub App credential"
+          id: "cloudbees-ci-previews-demo-github-app"
           owner: "${GITHUB_ORGANIZATION}"
-          privateKey: "${cbciPipelineWorkshopGitHubAppPrivateKey}"
+          privateKey: "${cbciPreviewsDemoGitHubAppPrivateKey}"
       - usernamePassword:
           description: "Example Service Username/Password Credential"
           id: "example-service-username-password"
