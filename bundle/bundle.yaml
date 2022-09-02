@@ -10,4 +10,4 @@ jcasc:
 catalog:
   - "plugin-catalog.yaml"
 items:
-  - "items.yaml"
+  - "/items"
