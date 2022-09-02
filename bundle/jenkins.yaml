@@ -8,6 +8,7 @@ cloudbees-slack-integration:
       optedIn: true
       scmId: "beedemo-dev"
       slack: "beedemo.dev@gmail.com"
+      slackID: "U0195CKRGMR"
       slackWorkspace: "T010A455W77"
 notificationConfiguration:
   enabled: true
