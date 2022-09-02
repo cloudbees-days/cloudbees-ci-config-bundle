@@ -18,7 +18,8 @@ globalCloudBeesPipelineTemplateCatalog:
     scm:
       github:
         configuredByUrl: true
-        credentialsId: "cloudbees-ci-pipeline-workshop-github-app"
+        credentialsId: "cloudbees-ci-previews-demo-github-app"
+        id: "cloudbees-ci-previews-demo-template-catalog"
         repoOwner: "${GITHUB_ORGANIZATION}"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/${GITHUB_ORGANIZATION}/pipeline-template-catalog.git"
@@ -53,7 +54,7 @@ unclassified:
         modernSCM:
           scm:
             github:
-              credentialsId: "cloudbees-ci-pipeline-workshop-github-app"
+              credentialsId: "cloudbees-ci-previews-demo-github-app"
               repoOwner: "${GITHUB_ORGANIZATION}"
               repository: "pipeline-library"
   headerLabel:
