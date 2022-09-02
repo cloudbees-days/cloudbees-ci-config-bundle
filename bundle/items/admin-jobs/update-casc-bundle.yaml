@@ -1,0 +1,18 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+root: admin-jobs
+items:
+- kind: cloudbeesTemplatedJob
+  catalog: workshop-catalog
+  name: config-bundle-ops
+  model: workshopCatalog/casc-bundle
+  attributes:
+  - value: cloudbees-ci-workshop-github-app
+    key: githubCredentialId
+  - value: REPLACE_GITHUB_ORG
+    key: repoOwner
+  - value: config-bundle-ops
+    key: name
+  - value: cloudbees-ci-config-bundle
+    key: repository
