@@ -8,7 +8,7 @@ items:
   name: config-bundle-ops
   model: workshopCatalog/casc-bundle
   attributes:
-  - value: cloudbees-ci-workshop-github-app
+  - value: cloudbees-ci-previews-demo-github-app
     key: githubCredentialId
   - value: REPLACE_GITHUB_ORG
     key: repoOwner
