@@ -11,3 +11,5 @@ catalog:
   - "plugin-catalog.yaml"
 items:
   - "items/"
+  - "/items/admin-jobs-folder.yaml"
+  - "/items/pipelines-folder.yaml"
