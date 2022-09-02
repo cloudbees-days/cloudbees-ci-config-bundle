@@ -1,3 +1,14 @@
+cloudbees-slack-integration:
+  config:
+    slackToken: "${slackToken}"
+    slackWorkspace: "T010A455W77"
+    users:
+    - id: "beedemo-dev"
+      jenkins: "beedemo-dev"
+      optedIn: true
+      scmId: "beedemo-dev"
+      slack: "beedemo.dev@gmail.com"
+      slackWorkspace: "T010A455W77"
 notificationConfiguration:
   enabled: true
   router: "operationsCenter"
