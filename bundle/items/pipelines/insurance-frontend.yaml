@@ -1,0 +1,20 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+root: pipelines
+items:
+- kind: cloudbeesTemplatedJob
+  catalog: workshop-catalog
+  name: insurance-frontend
+  model: workshop-catalog/container-build
+  attributes:
+  - key: name
+    value: insurance-frontend
+  - key: repoOwner
+    value: cbci-previews-demo
+  - key: repository
+    value: insurance-frontend
+  - key: githubCredentialId
+    value: cloudbees-ci-previews-demo-github-app
+  - key: baseImageName
+    value: nginx
