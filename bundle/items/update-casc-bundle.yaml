@@ -5,14 +5,14 @@ root: admin-jobs
 items:
 - kind: cloudbeesTemplatedJob
   catalog: workshop-catalog
-  name: config-bundle-ops
+  name: update-casc-bundle
   model: workshop-catalog/casc-bundle
   attributes:
   - value: cloudbees-ci-previews-demo-github-app
     key: githubCredentialId
   - value: REPLACE_GITHUB_ORG
     key: repoOwner
-  - value: config-bundle-ops
+  - value: update-casc-bundle
     key: name
-  - value: cloudbees-ci-config-bundle
+  - value: controller
     key: repository
