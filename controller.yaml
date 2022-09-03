@@ -35,7 +35,6 @@ items:
         storageClassName: premium-rwo
         domain: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
         namespace: controllers
-        javaOptions: -Dorg.jenkinsci.plugins.workflow.cps.DSL.UNSAFE_GROOVY_INTERPOLATION=fail
         yaml: |
           kind: "StatefulSet"
           spec:
