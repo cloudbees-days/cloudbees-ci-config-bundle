@@ -11,7 +11,7 @@ items:
   - key: name
     value: insurance-frontend
   - key: repoOwner
-    value: "${GITHUB_ORGANIZATION}"
+    value: ${GITHUB_ORGANIZATION}
   - key: repository
     value: insurance-frontend
   - key: githubCredentialId
