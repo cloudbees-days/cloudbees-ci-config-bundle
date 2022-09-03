@@ -4,9 +4,9 @@ removeStrategy:
 root: pipelines
 items:
 - kind: cloudbeesTemplatedJob
-  catalog: workshop-catalog
   name: insurance-frontend
-  model: workshop-catalog/container-build
+  catalog: workshop-catalog
+  model: container-build
   attributes:
   - key: name
     value: insurance-frontend
