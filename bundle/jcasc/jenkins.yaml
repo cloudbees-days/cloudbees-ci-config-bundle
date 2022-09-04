@@ -10,9 +10,6 @@ cloudbees-slack-integration:
       slack: "beedemo.dev@gmail.com"
       slackID: "U0195CKRGMR"
       slackWorkspace: "T010A455W77"
-notificationConfiguration:
-  enabled: true
-  router: "operationsCenter"
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
   globalNodeProperties:
@@ -45,19 +42,6 @@ globalCloudBeesPipelineTemplateCatalog:
             trust: "gitHubTrustPermissions"
     updateInterval: "1d"
 unclassified:
-  hibernationConfiguration:
-    activities:
-    - "build"
-    - "web"
-    enabled: true
-    gracePeriod: 2500
-  gitHubConfiguration:
-    apiRateLimitChecker: ThrottleForNormalize
-  gitHubPluginConfig:
-    hookSecretConfigs:
-    - credentialsId: "cloudbees-ci-workshop-github-webhook-secret"
-  globalDefaultFlowDurabilityLevel:
-    durabilityHint: PERFORMANCE_OPTIMIZED
   globallibraries:
     libraries:
     - defaultVersion: "main"
