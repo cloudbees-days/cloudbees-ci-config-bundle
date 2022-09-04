@@ -1,0 +1,22 @@
+kube:
+  podTemplatesConfiguration:
+    templates:
+    - containers:
+      - name: "nodejs"
+        command: "sleep"
+        args: "99d"
+        image: "us-east1-docker.pkg.dev/core-workshop/workshop-registry/node:14-alpine"
+        livenessProbe:
+          failureThreshold: 0
+          initialDelaySeconds: 0
+          periodSeconds: 0
+          successThreshold: 0
+          timeoutSeconds: 0
+        workingDir: "/home/jenkins/agent"
+      hostNetwork: false
+      idleMinutes: 30
+      idleMinutesStr: "30"
+      label: "nodejs-app"
+      name: "nodejs-app"
+      podRetention: "always"
+      yamlMergeStrategy: "override"
