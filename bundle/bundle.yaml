@@ -6,7 +6,7 @@ availabilityPattern: "REPLACE_AVAILABILITY_PATTERN"
 plugins:
   - "plugins.yaml"
 jcasc:
-  - "jenkins.yaml"
+  - "jcasc/"
 catalog:
   - "plugin-catalog.yaml"
 items:
