@@ -4,9 +4,11 @@ id: "cloudbees-ci-workshop-REPLACE_CONTROLLER_NAME"
 description: "CloudBees CI configuration bundle for the CloudBees CI Previews Demo"
 availabilityPattern: "REPLACE_AVAILABILITY_PATTERN"
 rbac:
- - "rbac.yaml"
+  - "rbac.yaml"
 plugins:
   - "plugins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
 jcasc:
   - "jcasc/"
 items:
