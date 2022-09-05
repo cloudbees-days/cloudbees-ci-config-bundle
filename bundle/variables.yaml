@@ -1,0 +1,4 @@
+variables:
+- team: REPLACE_GITHUB_ORG
+- admin-user: REPLACE_GITHUB_USERNAME-admin
+- manager-user: REPLACE_GITHUB_USERNAME
