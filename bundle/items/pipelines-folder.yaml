@@ -4,6 +4,15 @@ removeStrategy:
 items:
 - kind: folder
   name: pipelines
+  groups:
+    - name: "Job Managers"
+     members:
+       internal_groups:
+       - Managers
+     roles:
+       - name: "job-manager"
+         grantedAt: "current"
+         propagates: "true"
   properties:
   - itemRestrictions:
       allowedTypes:
