@@ -1,0 +1,38 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: pipelines
+  groups:
+    - name: "Job Managers"
+     members:
+       internal_groups:
+       - Managers
+     roles:
+       - name: "job-manager"
+         grantedAt: "current"
+         propagates: "true"
+  properties:
+  - itemRestrictions:
+      allowedTypes:
+      - org.jenkinsci.plugins.workflow.job.WorkflowJob
+      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
+      - workshop-catalog/container-build
+      filter: true
+  - items:
+    - kind: cloudbeesTemplatedJob
+      name: insurance-frontend
+      catalog: workshop-catalog
+      model: container-build
+      attributes:
+      - key: name
+        value: insurance-frontend
+      - key: repoOwner
+        value: ${GITHUB_ORGANIZATION}
+      - key: repository
+        value: insurance-frontend
+      - key: githubCredentialId
+        value: cloudbees-ci-previews-demo-github-app
+      - key: baseImageName
+        value: nginx
