@@ -12,7 +12,7 @@ items:
     roles:
     - name: "job-manager"
       grantedAt: "current"
-      propagates: "true
+      propagates: "true"
   properties:
   - itemRestrictions:
       allowedTypes:
