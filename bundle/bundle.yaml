@@ -12,3 +12,5 @@ catalog:
   - "plugin-catalog.yaml"
 items:
   - "items/"
+variables:
+  - "variables.yaml"
