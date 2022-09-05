@@ -8,8 +8,6 @@ plugins:
   - "plugins.yaml"
 jcasc:
   - "jcasc/"
-catalog:
-  - "plugin-catalog.yaml"
 items:
   - "items/"
 variables:
