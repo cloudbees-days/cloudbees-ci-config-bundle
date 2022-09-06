@@ -20,7 +20,7 @@ items:
     roles:
     - name: job-configure
       grantedAt: child
-      propagates: "true
+      propagates: "true"
   properties:
   - itemRestrictions:
       allowedTypes:
