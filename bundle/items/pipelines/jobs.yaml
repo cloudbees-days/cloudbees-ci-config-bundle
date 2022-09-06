@@ -13,6 +13,14 @@ items:
     - name: "job-manager"
       grantedAt: "current"
       propagates: "true"
+  - name: Job Configure
+    members:
+      internal_groups:
+      - Managers
+    roles:
+    - name: job-configure
+      grantedAt: child
+      propagates: "true"
   properties:
   - itemRestrictions:
       allowedTypes:
