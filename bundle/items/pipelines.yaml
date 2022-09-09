@@ -1,0 +1,30 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: pipelines
+  groups:
+  - name: "Job Managers"
+    members:
+      internal_groups:
+      - Managers
+    roles:
+    - name: "job-manager"
+      grantedAt: "current"
+      propagates: "true"
+  - name: Job Configure
+    members:
+      internal_groups:
+      - Managers
+    roles:
+    - name: job-configure
+      grantedAt: child
+      propagates: "true"
+  properties:
+  - itemRestrictions:
+      allowedTypes:
+      - org.jenkinsci.plugins.workflow.job.WorkflowJob
+      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
+      - workshop-catalog/container-build-deploy
+      filter: true
