@@ -6,7 +6,7 @@ jenkins:
   globalNodeProperties:
   - envVars:
       env:
-      - key: "BUNDLE_ID"
+      - key: "CASC_BUNDLE_ID"
         value: "${CASC_BUNDLE_ID}"
       - key: "GITHUB_APP"
         value: "${GITHUB_APP}"
