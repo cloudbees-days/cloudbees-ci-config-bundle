@@ -23,5 +23,5 @@ items:
       key: name
     - value: controller
       key: repository
-    - value: cloudbees-ci-previews-demo-github-app
+    - value: cloudbees-ci-pipeline-workshop-github-app
       key: githubCredentialId
