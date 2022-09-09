@@ -44,3 +44,20 @@ items:
       value: cloudbees-ci-previews-demo-github-app
     - key: baseImageName
       value: nginx
+  - kind: pipeline
+    name: simple-pipeline-job
+    concurrentBuild: true
+    definition:
+      cpsFlowDefinition:
+        script: |
+          pipeline {
+              agent none
+              stages {
+                  stage('Hello') {
+                      steps {
+                          echo 'Hello World'
+                      }
+                  }
+              }
+          }
+    disabled: false
