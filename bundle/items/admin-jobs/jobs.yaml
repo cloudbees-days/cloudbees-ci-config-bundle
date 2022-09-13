@@ -20,6 +20,10 @@ items:
             username: ${GITHUB_USER}-admin
             password: '${userApiToken}'
             usernameSecret: false
+        - string:
+            description: "CasC Update Secret"
+            id: "casc-update-secret"
+            secret: "${cbciCascWorkshopControllerProvisionSecret}"
   items:
   - kind: cloudbeesTemplatedJob
     name: update-casc-bundle
