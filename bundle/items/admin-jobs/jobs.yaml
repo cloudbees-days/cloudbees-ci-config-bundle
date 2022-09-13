@@ -11,6 +11,15 @@ items:
       - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
       - workshop-catalog/casc-bundle
       filter: true
+  - folderCredentialsProperty:
+      folderCredentials:
+      - credentials:
+        - usernamePassword:
+            id: api-token
+            description: controller admin api token
+            username: ${GITHUB_USER}-admin
+            password: '${userApiToken}'
+            usernameSecret: false
   items:
   - kind: cloudbeesTemplatedJob
     name: update-casc-bundle
