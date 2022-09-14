@@ -4,6 +4,9 @@ removeStrategy:
 items:
 - kind: folder
   name: admin-jobs
+  filteredRoles:
+  - authenticated
+  - manager
   properties:
   - itemRestrictions:
       allowedTypes:
@@ -11,9 +14,6 @@ items:
       - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
       - workshop-catalog/casc-bundle
       filter: true
-    filteredRoles:
-    - authenticated
-    - manager
   items:
   - kind: cloudbeesTemplatedJob
     name: update-casc-bundle
