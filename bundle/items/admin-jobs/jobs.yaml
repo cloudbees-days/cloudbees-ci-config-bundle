@@ -11,6 +11,11 @@ items:
       - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
       - workshop-catalog/casc-bundle
       filter: true
+    filteredRoles:
+    - authenticated
+    - manager
+    - job-manager
+    - job-configure
   items:
   - kind: cloudbeesTemplatedJob
     name: update-casc-bundle
