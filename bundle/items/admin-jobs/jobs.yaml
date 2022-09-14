@@ -14,8 +14,6 @@ items:
     filteredRoles:
     - authenticated
     - manager
-    - job-manager
-    - job-configure
   items:
   - kind: cloudbeesTemplatedJob
     name: update-casc-bundle
