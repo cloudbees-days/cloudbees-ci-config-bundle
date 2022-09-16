@@ -24,9 +24,10 @@ items:
   properties:
   - itemRestrictions:
       allowedTypes:
-      - org.jenkinsci.plugins.workflow.job.WorkflowJob
-      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
       - workshop-catalog/container-build
+      - workshop-catalog/hugo
+      - workshop-catalog/maven
+      - workshop-catalog/python
       filter: true
   items:
   - kind: cloudbeesTemplatedJob
