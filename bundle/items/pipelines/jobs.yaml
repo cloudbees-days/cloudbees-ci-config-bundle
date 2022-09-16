@@ -8,7 +8,7 @@ items:
   - name: "Job Managers"
     members:
       internal_groups:
-      - Managers
+      - controller-managers
     roles:
     - name: "job-manager"
       grantedAt: "current"
@@ -16,7 +16,7 @@ items:
   - name: Job Configure
     members:
       internal_groups:
-      - Managers
+      - controller-managers
     roles:
     - name: job-configure
       grantedAt: child
