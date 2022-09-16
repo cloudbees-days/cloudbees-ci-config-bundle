@@ -5,18 +5,18 @@ items:
 - kind: folder
   name: pipelines
   groups:
-  - name: "Job Managers"
+  - name: "job-managers"
     members:
       internal_groups:
-      - Managers
+      - controller-managers
     roles:
     - name: "job-manager"
       grantedAt: "current"
       propagates: "true"
-  - name: Job Configure
+  - name: jobs-configure
     members:
       internal_groups:
-      - Managers
+      - controller-managers
     roles:
     - name: job-configure
       grantedAt: child
