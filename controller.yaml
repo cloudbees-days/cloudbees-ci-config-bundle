@@ -20,12 +20,12 @@ items:
   - browse
   items:
   - kind: managedController
-    name: REPLACE_CONTROLLER_NAME
+    name: REPLACE_REPO
     properties:
     - healthReporting:
         enabled: true
     - configurationAsCode:
-        bundle: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
+        bundle: REPLACE_FOLDER_NAME-REPLACE_REPO
     - optOutProperty:
         securityEnforcerOptOutMode:
           authorizationOptOutMode: {
@@ -37,7 +37,7 @@ items:
         clusterEndpointId: default
         disk: 10
         storageClassName: premium-rwo
-        domain: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
+        domain: REPLACE_FOLDER_NAME-REPLACE_REPO
         namespace: controllers
         yaml: |
           kind: "StatefulSet"
@@ -53,7 +53,7 @@ items:
                   - name: "SECRETS"
                     value: "/var/jenkins_home/jcasc_secrets"
                   - name: "CONTROLLER_NAME"
-                    value: "REPLACE_CONTROLLER_NAME"
+                    value: "REPLACE_REPO"
                   - name: "GITHUB_ORGANIZATION"
                     value: "REPLACE_GITHUB_ORG"
                   - name: "GITHUB_USER"
@@ -63,9 +63,9 @@ items:
                   - name: "GITHUB_APP_ID"
                     value: "REPLACE_GITHUB_APP_ID"
                   - name: "CONTROLLER_SUBDOMAIN"
-                    value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
+                    value: "REPLACE_FOLDER_NAME-REPLACE_REPO"
                   - name: "CASC_BUNDLE_ID"
-                    value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
+                    value: "REPLACE_FOLDER_NAME-REPLACE_REPO"
                   - name: "AVAILABILITY_PATTERN"
                     value: "REPLACE_AVAILABILITY_PATTERN"
                   volumeMounts:
