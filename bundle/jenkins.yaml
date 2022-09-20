@@ -72,39 +72,17 @@ kube:
       yamlMergeStrategy: "override"
 credentials:
   system:
-    domainCredentials: 
+    domainCredentials:
     - credentials:
       - string:
-          description: "CasC Update Secret"
-          id: "casc-update-secret"
-          scope: GLOBAL
-          secret: "${cbciCascWorkshopControllerProvisionSecret}"
-      - string:
-          description: "Feature Management Key"
-          id: "fm-key"
-          scope: GLOBAL
-          secret: "${cbciPipelineWorkshopFmKey}"
-      - string:
-          description: "Webhook secret for CloudBees CI Workshop GitHub App"
+          description: "Webhook secret for CloudBees Feature Flags Workshop GitHub App"
           id: "cloudbees-ci-workshop-github-webhook-secret"
           scope: SYSTEM
           secret: "${gitHubWebhookSecret}"
       - gitHubApp:
           apiUri: "https://api.github.com"
-          appID: "103013"
-          description: "CloudBees CI Pipeline Workshop GitHub App credential"
-          id: "cloudbees-ci-pipeline-workshop-github-app"
-          owner: "${GITHUB_ORGANIZATION}"
-          privateKey: "${cbciPipelineWorkshopGitHubAppPrivateKey}"
-      - usernamePassword:
-          description: "Example Service Username/Password Credential"
-          id: "example-service-username-password"
-          password: "${cbciWorkshopExampleCredentialServicePassword}"
-          scope: GLOBAL
-          username: "service_user"
-      - usernamePassword:
-          password: "${userApiToken}"
-          description: description:api-token
-          id: api-token
-          usernameSecret: false
-          username: "${GITHUB_USER}"
+          appID: "79627"
+          description: "CloudBees Feature Flags Workshop GitHub App credential"
+          id: "cloudbees-ci-workshop-github-app"
+          owner: "REPLACE_GITHUB_ORG"
+          privateKey: "${featureFlagWorkshopGitHubAppPrivateKey}"
