@@ -10,8 +10,6 @@ jenkins:
         value: "${CASC_BUNDLE_ID}"
       - key: "GITHUB_APP"
         value: "${GITHUB_APP}"
-      - key: "CASC_UPDATE_SECRET"
-        value: "${cbciCascWorkshopControllerProvisionSecret}"
   quietPeriod: 0
   systemMessage: 'Jenkins configured using CloudBees CI CasC'
 globalCloudBeesPipelineTemplateCatalog:
@@ -20,8 +18,8 @@ globalCloudBeesPipelineTemplateCatalog:
     scm:
       github:
         configuredByUrl: true
-        credentialsId: "cloudbees-ci-pipeline-workshop-github-app"        
-        id: "cloudbees-ci-pipeline-workshop-template-catalog"
+        credentialsId: "cloudbees-ci-workshop-github-app"        
+        id: "cloudbees-cbfm-workshop-template-catalog"
         repoOwner: "${GITHUB_ORGANIZATION}"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/${GITHUB_ORGANIZATION}/pipeline-template-catalog.git"
@@ -43,7 +41,7 @@ unclassified:
         modernSCM:
           scm:
             github:
-              credentialsId: "cloudbees-ci-pipeline-workshop-github-app"
+              credentialsId: "cloudbees-ci-workshop-github-app"
               repoOwner: "${GITHUB_ORGANIZATION}"
               repository: "pipeline-library"
   headerLabel:
