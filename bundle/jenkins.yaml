@@ -46,6 +46,12 @@ unclassified:
               repository: "pipeline-library"
   headerLabel:
     text: "${GITHUB_APP}"
+  hibernationConfiguration:
+    activities:
+    - "build"
+    - "web"
+    enabled: true
+    gracePeriod: 4800
 kube:
   podTemplatesConfiguration:
     templates:
