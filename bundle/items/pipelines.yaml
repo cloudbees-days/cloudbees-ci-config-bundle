@@ -30,16 +30,16 @@ items:
       filter: true
   items:
   - kind: cloudbeesTemplatedJob
-    name: insurance-frontend
+    name: microblog-frontend
     catalog: workshop-catalog
     model: container-build
     attributes:
     - key: name
-      value: insurance-frontend
+      value: microblog-frontend
     - key: repoOwner
       value: ${GITHUB_ORGANIZATION}
     - key: repository
-      value: insurance-frontend
+      value: microblog-frontend
     - key: githubCredentialId
       value: cloudbees-ci-workshop-github-app
     - key: baseImageName
