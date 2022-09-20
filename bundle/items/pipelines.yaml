@@ -29,21 +29,19 @@ items:
       - workshop-catalog/container-build
       filter: true
   items:
-  - kind: pipeline
-    name: simple-pipeline-job
-    concurrentBuild: true
-    definition:
-      cpsFlowDefinition:
-        script: |
-          pipeline {
-              agent none
-              stages {
-                  stage('Hello') {
-                      steps {
-                          echo 'Hello World'
-                      }
-                  }
-              }
-          }
-    disabled: false
+  - kind: cloudbeesTemplatedJob
+    name: microblog-frontend
+    catalog: workshop-catalog
+    model: container-build
+    attributes:
+    - key: name
+      value: microblog-frontend
+    - key: repoOwner
+      value: ${GITHUB_ORGANIZATION}
+    - key: repository
+      value: microblog-frontend
+    - key: githubCredentialId
+      value: cloudbees-ci-workshop-github-app
+    - key: baseImageName
+      value: nginx
 
