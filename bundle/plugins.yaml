@@ -36,6 +36,5 @@ plugins:
 - id: pipeline-utility-steps
 - id: popper-api
 - id: warnings-ng
-- id: wikitext
 - id: workflow-aggregator
 - id: workflow-cps-checkpoint
