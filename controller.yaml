@@ -36,6 +36,7 @@ items:
         domain: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
         namespace: controllers
         yaml: |
+          apiVersion: "apps/v1"
           kind: "StatefulSet"
           spec:
             template:
