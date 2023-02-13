@@ -41,6 +41,7 @@ items:
         namespace: controllers
         javaOptions: -Dorg.jenkinsci.plugins.workflow.cps.DSL.UNSAFE_GROOVY_INTERPOLATION=fail
         yaml: |
+          apiVersion: "apps/v1"
           kind: "StatefulSet"
           spec:
             template:
