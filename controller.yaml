@@ -3,12 +3,12 @@ removeStrategy:
   items: NONE
 items:
 - kind: folder
-  name: REPLACE_FOLDER_NAME
+  name: occtreas
   groups:
   - members:
       users:
-      - REPLACE_GITHUB_USERNAME
-      - REPLACE_GITHUB_USERNAME-admin
+      - frbald
+      - frbald-admin
     roles:
     - name: browse
       grantedAt: current
@@ -20,12 +20,16 @@ items:
   - browse
   items:
   - kind: managedController
-    name: REPLACE_CONTROLLER_NAME
+    name: controller
     properties:
     - healthReporting:
         enabled: true
     - configurationAsCode:
-        bundle: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
+        bundle: occtreas-controller
+    - optOutProperty:
+        securityEnforcerOptOutMode:
+          authorizationOptOutMode: {
+            }
     configuration:
       kubernetes:
         memory: 4000
@@ -33,8 +37,9 @@ items:
         clusterEndpointId: default
         disk: 10
         storageClassName: premium-rwo
-        domain: REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME
+        domain: occtreas-controller
         namespace: controllers
+        javaOptions: -Dorg.jenkinsci.plugins.workflow.cps.DSL.UNSAFE_GROOVY_INTERPOLATION=fail
         yaml: |
           apiVersion: "apps/v1"
           kind: "StatefulSet"
@@ -50,21 +55,21 @@ items:
                   - name: "SECRETS"
                     value: "/var/jenkins_home/jcasc_secrets"
                   - name: "CONTROLLER_NAME"
-                    value: "REPLACE_CONTROLLER_NAME"
+                    value: "controller"
                   - name: "GITHUB_ORGANIZATION"
-                    value: "REPLACE_GITHUB_ORG"
+                    value: "OCCTreas"
                   - name: "GITHUB_USER"
-                    value: "REPLACE_GITHUB_USERNAME"
+                    value: "frbald"
                   - name: "GITHUB_APP"
-                    value: "REPLACE_GITHUB_APP"
+                    value: "cloudbees-ci-pipeline-workshop"
                   - name: "GITHUB_APP_ID"
-                    value: "REPLACE_GITHUB_APP_ID"
+                    value: ""
                   - name: "CONTROLLER_SUBDOMAIN"
-                    value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
+                    value: "occtreas-controller"
                   - name: "CASC_BUNDLE_ID"
-                    value: "REPLACE_FOLDER_NAME-REPLACE_CONTROLLER_NAME"
+                    value: "occtreas-controller"
                   - name: "AVAILABILITY_PATTERN"
-                    value: "REPLACE_AVAILABILITY_PATTERN"
+                    value: "cloudbees-ci-pipeline-workshop/occtreas/controller"
                   volumeMounts:
                   - name: "jcasc-secrets"
                     mountPath: "/var/jenkins_home/jcasc_secrets"

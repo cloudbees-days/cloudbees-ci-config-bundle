@@ -1,11 +1,14 @@
 apiVersion: "1"
 version: "1"
-id: "cloudbees-ci-workshop-REPLACE_CONTROLLER_NAME"
-description: "CloudBees CI configuration bundle for the CloudBees CI Workshop"
-availabilityPattern: "REPLACE_AVAILABILITY_PATTERN"
+id: "cloudbees-ci-workshop-controller"
+description: "CloudBees CI configuration bundle for the CloudBees CI Pipeline Workshop"
+availabilityPattern: "cloudbees-ci-pipeline-workshop/occtreas/controller"
+parent: "rbac-base"
 plugins:
   - "plugins.yaml"
 jcasc:
   - "jenkins.yaml"
-catalog:
-  - "plugin-catalog.yaml"
+items:
+  - "items/"
+variables:
+  - "variables.yaml"

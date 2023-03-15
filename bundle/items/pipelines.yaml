@@ -1,0 +1,49 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: pipelines
+  groups:
+  - name: "job-managers"
+    members:
+      internal_groups:
+      - controller-managers
+    roles:
+    - name: "job-manager"
+      grantedAt: "current"
+      propagates: "true"
+  - name: jobs-configure
+    members:
+      internal_groups:
+      - controller-managers
+    roles:
+    - name: job-configure
+      grantedAt: child
+      propagates: "true"
+  properties:
+  - itemRestrictions:
+      allowedTypes:
+      - org.jenkinsci.plugins.workflow.job.WorkflowJob
+      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
+      - workshop-catalog/container-build
+      filter: true
+  items:
+  - kind: pipeline
+    name: simple-pipeline-job
+    concurrentBuild: true
+    definition:
+      cpsFlowDefinition:
+        script: |
+          pipeline {
+              agent none
+              stages {
+                  stage('Hello') {
+                      steps {
+                          echo 'Hello World'
+                      }
+                  }
+              }
+          }
+    disabled: false
+

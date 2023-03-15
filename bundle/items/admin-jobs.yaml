@@ -1,0 +1,27 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: admin-jobs
+  properties:
+  - itemRestrictions:
+      allowedTypes:
+      - org.jenkinsci.plugins.workflow.job.WorkflowJob
+      - org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject
+      - workshop-catalog/casc-bundle
+      filter: true
+  items:
+  - kind: cloudbeesTemplatedJob
+    name: update-casc-bundle
+    catalog: workshop-catalog
+    model: casc-bundle
+    attributes:
+    - value: ${GITHUB_ORGANIZATION}
+      key: repoOwner
+    - value: update-casc-bundle
+      key: name
+    - value: controller
+      key: repository
+    - value: cloudbees-ci-pipeline-workshop-github-app
+      key: githubCredentialId
